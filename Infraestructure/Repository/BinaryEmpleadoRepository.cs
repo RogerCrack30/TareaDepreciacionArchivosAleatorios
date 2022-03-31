@@ -70,6 +70,8 @@ namespace Infraestructure.Repository
         public int Update(Empleado t)
         {
             return context.Update<Empleado>(t);
+
+            //ignorar todo esto para crear un nuevo proyecto para al
         }
 
 
