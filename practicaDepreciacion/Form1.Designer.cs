@@ -46,6 +46,13 @@
             this.borrarActivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarActivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirDeLaAplicacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.cboEmpleado = new System.Windows.Forms.ComboBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -72,7 +79,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 311);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(757, 166);
@@ -101,6 +108,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtDescripcion);
+            this.panel1.Controls.Add(this.cboEmpleado);
+            this.panel1.Controls.Add(this.cboEstado);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.numericUpDown1);
@@ -111,10 +124,10 @@
             this.panel1.Controls.Add(this.txvalor);
             this.panel1.Controls.Add(this.Nombre);
             this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Location = new System.Drawing.Point(198, 23);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(20, 39);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(485, 136);
+            this.panel1.Size = new System.Drawing.Size(485, 247);
             this.panel1.TabIndex = 19;
             // 
             // label7
@@ -150,7 +163,7 @@
             // txutil
             // 
             this.txutil.Location = new System.Drawing.Point(86, 112);
-            this.txutil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txutil.Margin = new System.Windows.Forms.Padding(2);
             this.txutil.Name = "txutil";
             this.txutil.Size = new System.Drawing.Size(68, 20);
             this.txutil.TabIndex = 8;
@@ -159,7 +172,7 @@
             // txvalorr
             // 
             this.txvalorr.Location = new System.Drawing.Point(86, 81);
-            this.txvalorr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txvalorr.Margin = new System.Windows.Forms.Padding(2);
             this.txvalorr.Name = "txvalorr";
             this.txvalorr.Size = new System.Drawing.Size(68, 20);
             this.txvalorr.TabIndex = 7;
@@ -168,7 +181,7 @@
             // txvalor
             // 
             this.txvalor.Location = new System.Drawing.Point(86, 51);
-            this.txvalor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txvalor.Margin = new System.Windows.Forms.Padding(2);
             this.txvalor.Name = "txvalor";
             this.txvalor.Size = new System.Drawing.Size(68, 20);
             this.txvalor.TabIndex = 6;
@@ -182,7 +195,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(675, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(775, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -192,7 +205,8 @@
             this.nuevoActivoToolStripMenuItem,
             this.borrarActivoToolStripMenuItem,
             this.actualizarActivoToolStripMenuItem,
-            this.salirDeLaAplicacionToolStripMenuItem});
+            this.salirDeLaAplicacionToolStripMenuItem,
+            this.empleadoToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -225,11 +239,69 @@
             this.salirDeLaAplicacionToolStripMenuItem.Text = "salir de la aplicacion";
             this.salirDeLaAplicacionToolStripMenuItem.Click += new System.EventHandler(this.salirDeLaAplicacionToolStripMenuItem_Click);
             // 
+            // empleadoToolStripMenuItem
+            // 
+            this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
+            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empleadoToolStripMenuItem.Text = "Empleado";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 143);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Descripcion";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(255, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Estado";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(255, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Empleado";
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(315, 88);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(121, 21);
+            this.cboEstado.TabIndex = 23;
+            // 
+            // cboEmpleado
+            // 
+            this.cboEmpleado.FormattingEnabled = true;
+            this.cboEmpleado.Location = new System.Drawing.Point(315, 143);
+            this.cboEmpleado.Name = "cboEmpleado";
+            this.cboEmpleado.Size = new System.Drawing.Size(121, 21);
+            this.cboEmpleado.TabIndex = 24;
+            this.cboEmpleado.SelectedIndexChanged += new System.EventHandler(this.cboEmpleado_SelectedIndexChanged);
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(86, 144);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(163, 82);
+            this.txtDescripcion.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 380);
+            this.ClientSize = new System.Drawing.Size(775, 489);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
@@ -267,6 +339,13 @@
         private System.Windows.Forms.ToolStripMenuItem borrarActivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizarActivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirDeLaAplicacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empleadoToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.ComboBox cboEmpleado;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

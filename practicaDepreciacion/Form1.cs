@@ -18,7 +18,8 @@ namespace practicaDepreciacion
         IActivoServices activoServices;
   
         private int SelecionarId;
-     
+        private object index;
+
         public Form1(IActivoServices ActivoServices)
         {
             this.activoServices = ActivoServices;
@@ -184,6 +185,11 @@ namespace practicaDepreciacion
         private void salirDeLaAplicacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cboEmpleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

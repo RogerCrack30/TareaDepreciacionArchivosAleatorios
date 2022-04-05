@@ -9,9 +9,10 @@ namespace Domain.Enum
     public enum EstadoActivo
     {
 
-        disponible,
-        noDisponible
-
+        MalEstado,
+        Reparacion,
+        Asignado,
+        Disponible
 
     }
 }

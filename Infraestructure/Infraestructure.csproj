@@ -48,7 +48,9 @@
     <Compile Include="Repository\BinaryReaderExtension.cs" />
     <Compile Include="Repository\ListActivoRepository.cs" />
     <Compile Include="Repository\RAFContext.cs" />
+    <Compile Include="Repository\RafContextEmpleado.cs" />
     <Compile Include="Repository\StreamActivoRepository.cs" />
+    <Compile Include="Repository\StreamEmpleadoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
