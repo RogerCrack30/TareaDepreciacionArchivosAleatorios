@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Domain.Entities
         public String Direccion { get; set; }
         public String Telefono { get; set; }
         public String Email { get; set; }
-        public String Estado { get; set; }
+        public EstadoEmpleado Estado { get; set; }
 
     }
 }

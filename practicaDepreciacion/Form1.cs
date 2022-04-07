@@ -40,7 +40,7 @@ namespace practicaDepreciacion
      
         private bool verificar()
         {
-            if (String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txvalor.Text) || String.IsNullOrEmpty(txutil.Text) || String.IsNullOrEmpty(txvalorr.Text))
+            if (String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txvalor.Text) || String.IsNullOrEmpty(txutil.Text) || String.IsNullOrEmpty(txvalorr.Text) || String.IsNullOrEmpty(txtDescripcion.Text) || String.IsNullOrEmpty(txtCodigo.Text) || String.IsNullOrEmpty(cboEstado.Text))
             {
               
                 return false;
@@ -53,6 +53,8 @@ namespace practicaDepreciacion
             this.txvalor.Text = "";
             this.txvalorr.Text = "";
             this.txutil.Text = "";
+            this.txtCodigo.Text = "";
+            this.txtDescripcion.Text = "";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -127,7 +129,11 @@ namespace practicaDepreciacion
                     Nombre = txtNombre.Text,
                     Valor = double.Parse(txvalor.Text),
                     ValorResidual = double.Parse(txvalorr.Text),
-                    VidaUtil = int.Parse(txutil.Text)
+                    VidaUtil = int.Parse(txutil.Text),
+                    Descripcion = txtDescripcion.Text,
+                    Codigo = txtCodigo.Text,
+                    Estado = (cboEstado.Text)
+
                 };
                 activoServices.Add(activo);
                 dataGridView1.DataSource = null;
@@ -168,6 +174,9 @@ namespace practicaDepreciacion
                         Valor = double.Parse(txvalor.Text),
                         ValorResidual = double.Parse(txvalorr.Text),
                         VidaUtil = int.Parse(txutil.Text),
+                        Descripcion = txtDescripcion.Text,
+                        Codigo = txtCodigo.Text,
+                        Estado = (cboEstado.Text),
                         Id = (int)numericUpDown1.Value
                     };
                     activoServices.Update(activo);

@@ -12,8 +12,14 @@ namespace Infraestructure.Repository
     public class BinaryEmpleadoRepository: IEmpleadoModel
     {
 
-        private RAFContext<Activo> context;
-        private const int SIZE = 568;
+        private RAFContext<Empleado> context;
+        private const int SIZE = 580;
+        public BinaryEmpleadoRepository()
+        {
+            context = new RAFContext<Empleado>("empleado", SIZE);
+
+        }
+
         public void Add(Empleado t)
         {
             try
